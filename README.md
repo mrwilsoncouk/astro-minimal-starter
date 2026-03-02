@@ -1,61 +1,64 @@
-# Astro CloudCannon Starter
+# CloudCannon Astro Starter
 
-A starting point for developers looking to build a website with Astro, using Bookshop components in CloudCannon.
-
-Create your own copy, and start creating your own components to use in the CloudCannon CMS. Build components using `.jsx` or `.astro` files.
-
-To try to cut down on setup time this starter template includes some commonly used [features](#features) in CloudCannon.
-
-This template is aimed at helping developers build sites quickly, rather than providing editors with a fully built editable site. If you are an editor looking for an already built template, have a look at [CloudCannon's templates page](https://cloudcannon.com/templates/).
-
-[See a demo version of this site](https://tiny-jackal.cloudvent.net/).
-
-## Getting Started
-
-1. To start using this template, go to the [GitHub repository](https://github.com/CloudCannon/astro-starter/), and click `Use this template` to make your own copy.
-
-2. Follow [this guide](https://cloudcannon.com/documentation/guides/astro-starter-guide/sync-your-files/) to add your new GitHub repository to CloudCannon.
-
-### Local Development
-
-1. `git clone` your repository
-2. Run `npm install`
-3. Run `npm start`
-
-### Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm start`               | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+A minimal starter template for building an Astro site with [CloudCannon](https://cloudcannon.com/) using **Editable Regions** for visual editing.
 
 ## Features
 
-* [Tailwind](https://tiny-jackal.cloudvent.net/blog/tailwind/)
+- Visual editing with [Editable Regions](https://cloudcannon.com/documentation/developer-guides/set-up-visual-editing/an-overview-of-editable-regions/) (text, image, array, and component regions)
+- Page building with reusable components
+- Blog with pagination and tags
+- [Tailwind CSS v4](https://tailwindcss.com/) with CSS-first configuration
+- SEO controls
+- Pagefind search
 
-* [Font Awesome icons](https://tiny-jackal.cloudvent.net/blog/icons/)
+## Getting Started
 
-* [Built-in search with Pagefind](https://tiny-jackal.cloudvent.net/blog/search/)
+```bash
+npm install
+npm run dev
+```
 
-* [Blog with pagination & tags](https://tiny-jackal.cloudvent.net/blog/paginated-collection/)
+## CloudCannon Setup
 
-* [Page building with Bookshop components](https://tiny-jackal.cloudvent.net/blog/bookshop/)
+This site is pre-configured for CloudCannon. Connect your repository and CloudCannon will detect the configuration from `cloudcannon.config.yml`.
 
-* [Markdown options & styles](https://tiny-jackal.cloudvent.net/blog/markdown/)
+### Editable Regions
 
-* [Pre-configured shortcodes](https://tiny-jackal.cloudvent.net/blog/markdown/)
+This starter demonstrates several types of Editable Region:
 
-* [Header and Footer controls](https://tiny-jackal.cloudvent.net/blog/data-files/)
+- **Text** (`data-editable="text"`) for editing front matter text values inline
+- **Image** (`data-editable="image"`) for editing front matter image values
+- **Array** (`data-editable="array"`) for page-building with reorderable content blocks
+- **Component** (`<editable-component>`) for live re-rendering of Astro components
 
-* [Create and delete pages](https://tiny-jackal.cloudvent.net/blog/page-building/)
+Components that need live re-rendering are registered in `src/scripts/register-components.ts` and loaded conditionally when the site is open in CloudCannon's Visual Editor.
 
-* [Accessibility controls](https://tiny-jackal.cloudvent.net/blog/markdown/)
+### Components
 
-* [SEO controls](https://tiny-jackal.cloudvent.net/blog/seo/)
+Three page-building components are included:
 
-* [Color palette controls](https://tiny-jackal.cloudvent.net/blog/data-files/)
+- **Hero** — heading, subheading, image, and optional button
+- **LeftRight** — side-by-side text and image, with optional flip and button
+- **TextBlock** — heading and rich text content
+
+### Content
+
+- **Pages** are in `src/content/pages/` as Markdown with structured front matter
+- **Blog posts** are in `src/content/blog/` as MDX
+- **Data** files (site settings, navigation) are in `data/`
+
+## Project Structure
+
+```
+├── .cloudcannon/          # CloudCannon schemas and postbuild
+├── cloudcannon.config.yml # CloudCannon configuration
+├── data/                  # Site-wide data files
+├── public/                # Static assets
+└── src/
+    ├── components/        # Astro components
+    ├── content/           # Content collections (pages, blog)
+    ├── layouts/           # Page layouts
+    ├── pages/             # Astro page routes
+    ├── scripts/           # Component registration for visual editing
+    └── styles/            # Global CSS (Tailwind v4)
+```
