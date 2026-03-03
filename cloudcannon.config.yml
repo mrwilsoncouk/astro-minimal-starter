@@ -15,6 +15,7 @@ collections_config:
     path: src/content/pages
     glob:
       - '**/*.md'
+      - '**/*.astro'
     url: '/[full_slug]/'
     icon: laptop_mac
     _enabled_editors:
@@ -32,6 +33,11 @@ collections_config:
         name: Paginated collection
         path: '.cloudcannon/schemas/paginated.md'
         remove_extra_inputs: false
+      source_page:
+        name: Source Editable Page
+        path: '.cloudcannon/schemas/source-page.astro'
+        remove_extra_inputs: false
+        hide_extra_inputs: true
     create:
       path: '[relative_base_path]/{filename|slugify|lowercase}.md'
     new_preview_url: /

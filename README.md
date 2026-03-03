@@ -33,6 +33,12 @@ This starter demonstrates several types of Editable Region:
 
 Components that need live re-rendering are registered in `src/scripts/register-components.ts` and loaded conditionally when the site is open in CloudCannon's Visual Editor.
 
+#### Source Editables
+
+The About page (`src/content/pages/about.astro`) demonstrates **source editables** — a pattern where content lives directly in an Astro template rather than in Markdown front matter. Source editable regions use `data-editable="source"`, `data-path="path/to/file.astro"`, and `data-key` attributes, and CloudCannon writes changes straight back to the `.astro` file.
+
+This is useful for standalone pages (like About or Contact) where a developer wants full control over the markup while still giving editors visual editing access, and where page building with components is *not* desired. No accompanying Markdown file or front matter schema is needed; a thin routing wrapper in `src/pages/about.astro` handles Astro's file-based routing.
+
 ### Components
 
 Three page-building components are included:

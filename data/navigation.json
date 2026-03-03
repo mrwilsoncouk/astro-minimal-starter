@@ -5,6 +5,10 @@
     "logo_url": "/",
     "links": [
       {
+        "link": "/about/",
+        "text": "About"
+      },
+      {
         "link": "/blog/",
         "text": "Blog"
       },
