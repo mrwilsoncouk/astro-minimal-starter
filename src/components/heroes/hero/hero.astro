@@ -36,7 +36,7 @@ const imageSrc = allImages[image.image_path]?.default ?? image.image_path;
         {heading}
       </h1>
       <div class="text-lg text-gray-600 max-w-prose">
-        <Markdown content={subheading} dataProp="subheading" dataType="text" />
+        <Markdown content={subheading} dataProp="subheading" dataType="block" />
       </div>
       {
         button?.link && (
