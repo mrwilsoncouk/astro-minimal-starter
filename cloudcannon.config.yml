@@ -193,7 +193,7 @@ _structures:
         value:
           _name: LeftRight
           heading:
-          text:
+          text_content:
           image:
             image_path:
             alt_text:
@@ -241,6 +241,17 @@ _inputs:
       link: true
       bulletedlist: true
       numberedlist: true
+      undo: true
+      redo: true
+      removeformat: true
+      copyformatting: true
+  subheading:
+    type: markdown
+    options:
+      bold: true
+      italic: true
+      strike: true
+      link: true
       undo: true
       redo: true
       removeformat: true

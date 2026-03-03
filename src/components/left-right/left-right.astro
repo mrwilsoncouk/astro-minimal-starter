@@ -5,7 +5,7 @@ import Markdown from "../utility/markdown.astro";
 
 interface Props {
   heading: string;
-  text: string;
+  text_content: string;
   image: {
     image_path: string;
     alt_text: string;
@@ -17,7 +17,7 @@ interface Props {
   };
 }
 
-const { heading, text, image, flipped, button } = Astro.props;
+const { heading, text_content, image, flipped, button } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/**/*.{jpeg,jpg,png,gif,svg,webp,avif}",
@@ -37,7 +37,7 @@ const imageSrc = images[image.image_path]?.default ?? image.image_path;
         {heading}
       </h2>
       <div class="text-gray-600">
-        <Markdown content={text} dataProp="text" dataType="block" />
+        <Markdown content={text_content} dataProp="text_content" dataType="block" />
       </div>
       {
         button?.link && (
