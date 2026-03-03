@@ -28,7 +28,7 @@ hero_block:
 content_blocks:
   - _name: LeftRight
     heading: Keep what you need. Delete the rest.
-    text: >-
+    text_content: >-
       This starter aims to get developers building their own site quickly in
       CloudCannon. It strikes a balance between minimal boilerplate and
       useful features out of the box:
@@ -52,7 +52,7 @@ content_blocks:
     flipped: true
   - _name: LeftRight
     heading: You choose your editing experience.
-    text: >-
+    text_content: >-
       A flexible git-backed CMS that specialises in editing markdown and data
       files.
 
