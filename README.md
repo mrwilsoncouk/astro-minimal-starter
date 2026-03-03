@@ -4,7 +4,7 @@ A minimal starter template for building an Astro site with [CloudCannon](https:/
 
 ## Features
 
-- Visual editing with [Editable Regions](https://cloudcannon.com/documentation/developer-guides/set-up-visual-editing/an-overview-of-editable-regions/) (text, image, array, and component regions)
+- Visual editing with [Editable Regions](https://cloudcannon.com/documentation/developer-guides/set-up-visual-editing/an-overview-of-editable-regions/) (text, image, array, source, and component regions)
 - Page building with reusable components
 - Blog with pagination and tags
 - [Tailwind CSS v4](https://tailwindcss.com/) with CSS-first configuration
@@ -37,6 +37,7 @@ This starter demonstrates several types of Editable Region:
 - **Text** (`data-editable="text"`) for editing front matter text values inline
 - **Image** (`data-editable="image"`) for editing front matter image values
 - **Array** (`data-editable="array"`) for page-building with reorderable content blocks
+- **Source** (`data-editable="source"`) for making standalone `.astro` pages editable
 - **Component** (`<editable-component>`) for live re-rendering of Astro components
 
 Components that need live re-rendering are registered in `src/scripts/register-components.ts` and loaded conditionally when the site is open in CloudCannon's Visual Editor.
@@ -45,7 +46,7 @@ Components that need live re-rendering are registered in `src/scripts/register-c
 
 The About page (`src/content/pages/about.astro`) demonstrates **source editables** — a pattern where content lives directly in an Astro template rather than in Markdown front matter. Source editable regions use `data-editable="source"`, `data-path="path/to/file.astro"`, and `data-key` attributes. CloudCannon writes changes straight back to the `.astro` file.
 
-This is useful for standalone pages (like About or Contact) where a developer wants full control over the markup while still giving editors visual editing access — and where page building with components is *not* desired. No accompanying Markdown file or front matter schema is needed. A thin routing wrapper in `src/pages/about.astro` handles Astro's file-based routing.
+This is useful for standalone pages (like About or Contact) where a developer wants full control over the markup while still giving editors visual editing access — **and where page building with components is *not* desired**. No accompanying Markdown file or front matter schema is needed. A thin routing wrapper in `src/pages/about.astro` handles Astro's file-based routing.
 
 ### Components
 
