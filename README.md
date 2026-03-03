@@ -13,6 +13,14 @@ A minimal starter template for building an Astro site with [CloudCannon](https:/
 
 ## Getting Started
 
+Click `Use this template` to make your own copy of the repository.
+
+### Local Development
+
+1. Clone the repository to your local machine.
+
+2. Start the development server.
+
 ```bash
 npm install
 npm run dev
@@ -20,7 +28,7 @@ npm run dev
 
 ## CloudCannon Setup
 
-This site is pre-configured for CloudCannon. Connect your repository and CloudCannon will detect the configuration from `cloudcannon.config.yml`.
+This site is pre-configured for CloudCannon. Connect your repository and CloudCannon will detect the configuration in `.cloudcannon/initial-site-settings.json` and build your site automatically. The editing experience is defined in `cloudcannon.config.yml`, which you can modify to control your editors' experience.
 
 ### Editable Regions
 
@@ -35,9 +43,9 @@ Components that need live re-rendering are registered in `src/scripts/register-c
 
 #### Source Editables
 
-The About page (`src/content/pages/about.astro`) demonstrates **source editables** — a pattern where content lives directly in an Astro template rather than in Markdown front matter. Source editable regions use `data-editable="source"`, `data-path="path/to/file.astro"`, and `data-key` attributes, and CloudCannon writes changes straight back to the `.astro` file.
+The About page (`src/content/pages/about.astro`) demonstrates **source editables** — a pattern where content lives directly in an Astro template rather than in Markdown front matter. Source editable regions use `data-editable="source"`, `data-path="path/to/file.astro"`, and `data-key` attributes. CloudCannon writes changes straight back to the `.astro` file.
 
-This is useful for standalone pages (like About or Contact) where a developer wants full control over the markup while still giving editors visual editing access, and where page building with components is *not* desired. No accompanying Markdown file or front matter schema is needed; a thin routing wrapper in `src/pages/about.astro` handles Astro's file-based routing.
+This is useful for standalone pages (like About or Contact) where a developer wants full control over the markup while still giving editors visual editing access — and where page building with components is *not* desired. No accompanying Markdown file or front matter schema is needed. A thin routing wrapper in `src/pages/about.astro` handles Astro's file-based routing.
 
 ### Components
 
@@ -49,8 +57,8 @@ Three page-building components are included:
 
 ### Content
 
-- **Pages** are in `src/content/pages/` as Markdown with structured front matter
-- **Blog posts** are in `src/content/blog/` as MDX
+- **Pages** are in `src/content/pages/` as Markdown with structured front matter, and support a component-based page-building workflow. Developers can also add standalone pages paired with a routing file in `src/pages/` (like `src/content/pages/about.astro`), and decide which parts of those pages are editable in CloudCannon.
+- **Blog posts** are in `src/content/blog/` as MDX files
 - **Data** files (site settings, navigation) are in `data/`
 
 ## Project Structure
