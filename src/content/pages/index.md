@@ -21,7 +21,7 @@ hero_block:
     
     
     Once you've explored this minimal starter, consider 
-    taking a look at the Astro Component Starter to assist in building out your components.
+    taking a look at the [Astro Component Starter](https://github.com/CloudCannon/astro-component-starter) to assist in building out your components.
   image:
     image_path: /src/assets/images/transparent-bg/undraw-online-test.svg
     alt_text: >-
