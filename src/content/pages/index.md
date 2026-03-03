@@ -15,15 +15,19 @@ hero_block:
   _name: Hero
   heading: CloudCannon Astro Starter
   subheading: >-
-    A starting point for developers looking to build a website with Astro,
+    A **minimal** starting point for developers looking to build a website with Astro,
     using Editable Regions in CloudCannon. Create your own copy, and start
-    creating your own components to use in the Visual Editor.
+    creating your own components to use in the Visual Editor. 
+    
+    
+    Once you've explored this minimal starter, consider 
+    taking a look at the Astro Component Starter to assist in building out your components.
   image:
     image_path: /src/assets/images/transparent-bg/undraw-online-test.svg
     alt_text: >-
       An illustration of someone leaning against a desktop computer monitor.
   button:
-    text: GitHub
+    text: Get Started
     link: https://github.com/CloudCannon/astro-starter/
 content_blocks:
   - _name: LeftRight
@@ -70,6 +74,6 @@ content_blocks:
         An illustration of someone sitting at a desk.
     flipped: false
     button:
-      text: GitHub
-      link: https://github.com/CloudCannon/astro-starter/
+      text: CloudCannon Docs
+      link: https://cloudcannon.com/documentation/
 ---
