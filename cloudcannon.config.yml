@@ -130,6 +130,27 @@ collections_config:
     path: data
     disable_add: true
     disable_add_folder: true
+    _inputs:
+      header:
+        type: object
+        options:
+          preview:
+            icon: menu
+            text:
+              - Header navigation
+      footer:
+        type: object
+        options:
+          preview:
+            icon: bottom_navigation
+            text:
+              - Footer navigation
+      logo:
+        type: image
+      logo_url:
+        comment: Link for the logo in the top left of the footer.
+      copyright:
+        comment: Automatically prefixed with the current year.
 
 collection_groups:
   - heading: Pages
@@ -178,18 +199,17 @@ _editables:
 _structures:
   content_blocks:
     values:
-      - label: Hero
-        value:
-          _name: Hero
-          heading:
-          subheading:
-          image:
-            image_path:
-            alt_text:
-          button:
-            text:
-            link:
       - label: Left Right
+        icon: view_column_2
+        preview:
+          text:
+            - key: heading
+            - Left Right
+          subtext:
+            - key: text_content
+          image:
+            - key: image.image_path
+          icon: view_column_2
         value:
           _name: LeftRight
           heading:
@@ -202,6 +222,14 @@ _structures:
             text:
             link:
       - label: Text Block
+        icon: article
+        preview:
+          text:
+            - key: heading
+            - Text Block
+          subtext:
+            - key: text_content
+          icon: article
         value:
           _name: TextBlock
           heading:
@@ -209,6 +237,16 @@ _structures:
   hero_blocks:
     values:
       - label: Hero
+        icon: flag
+        preview:
+          text:
+            - key: heading
+            - Hero
+          subtext:
+            - key: subheading
+          image:
+            - key: image.image_path
+          icon: flag
         value:
           _name: Hero
           heading:
@@ -296,12 +334,17 @@ _inputs:
         subtext:
           - key: link
           - 'Add a link'
-  logo:
-    type: image
-  logo_url:
-    comment: Link for the logo in the top left of the footer.
-  copyright:
-    comment: Automatically prefixed with the current year.
+  button:
+    type: object
+    options:
+      preview:
+        icon: smart_button
+        text:
+          - key: text
+          - Button
+        subtext:
+          - key: link
+          - Set button link
   page_description:
     comment: Defaults to the description set in the Site SEO data file.
   canonical_url:
