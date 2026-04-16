@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b2b1e"/>
+      <stop offset="100%" stop-color="#0f1712"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#g)"/>
+  <circle cx="950" cy="120" r="220" fill="rgba(185,255,79,0.15)"/>
+  <circle cx="1030" cy="250" r="170" fill="rgba(185,255,79,0.08)"/>
+  <rect x="0" y="470" width="1200" height="230" fill="rgba(0,0,0,0.35)"/>
+  
+        <ellipse cx="760" cy="210" rx="130" ry="64" fill="rgba(255,255,255,0.12)"/>
+        <polygon points="860,210 930,170 930,250" fill="rgba(255,255,255,0.12)"/>
+        <circle cx="720" cy="196" r="6" fill="#fff"/>
+        
+  <text x="70" y="150" fill="#b9ff4f" font-size="34" font-family="Arial" font-weight="700">Premium Carp Fishing Bait</text>
+  <text x="70" y="245" fill="white" font-size="82" font-family="Arial" font-weight="800">Quality Carp Particles</text>
+  <text x="70" y="305" fill="rgba(255,255,255,0.72)" font-size="28" font-family="Arial">Premium Astro storefront demo</text>
+</svg>
